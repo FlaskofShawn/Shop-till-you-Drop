@@ -1,0 +1,531 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #F5F0E7;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 375px;
+  margin: 30px 20px;
+  /* overflow: auto; */
+}
+
+.header {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.btn {
+  /* background: #eda04b; */
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  margin: 30px;
+  border-radius: 30px;
+  box-shadow: 1px 4px 5px rgb(171, 172, 172);
+  min-width: 180px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  font-weight: 400;
+}
+
+.textInstruct {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  font-weight: 700;
+  font-size: 110%;
+  text-align: center;
+  margin: 28px auto;
+}
+
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.prompt {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 90%;
+}
+
+img {
+  margin: 0px 30px 0px 30px;
+  padding: 30px;
+  max-width: 75%;
+}
+
+.incomeSelect {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+
+/* @ Credit: https://bootswatch.com/flatly/ */
+.form-select {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-select:focus {
+  border-color: #969fa8;
+  outline: 0;
+  box-shadow: 0 0 0 0.1rem rgba(182, 194, 206, 0.25);
+}
+
+
+.form-select:disabled {
+  background-color: #ecf0f1;
+}
+
+.form-select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #212529;
+}
+
+.form-select-sm {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.form-select-lg {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.25rem;
+}
+
+
+
+
+
+/****************************** price-image-section start *************************/
+
+.price-tag-div{
+  background-image: url(./components/imgs/pricetag.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  /* height: 449px;
+  width: 311px; */
+  height: 100%;
+  width: 100%;
+
+  /* flex settings */
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  /* justify-content: space-evenly; */
+}
+
+#school-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12%;
+  margin-bottom: 10%;
+}
+
+#school-text {
+  font-weight: bold;
+  margin-bottom: 8%;
+  font-size: large;
+}
+
+#school-name {
+  font-size: large;
+}
+
+#school-address {
+  font-size: large;
+}
+
+#tuition-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+#tuition-text {
+  font-weight: bold;
+  font-size: large;
+  margin-bottom: 5%;
+}
+
+#tution-fee {
+  font-size: large;
+}
+
+#room-supplies-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#room-supplies-text {
+  flex-wrap: wrap;
+  font-weight: bold;
+  margin-bottom: 10%;
+  width: 60%;
+  text-align: center;
+}
+
+#room-supplies-fee {
+  margin-bottom: 5%;
+  font-size: large;
+}
+
+#total-price-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#total-price-delim {
+  margin-bottom: 5%;
+  width: 100%;
+  border-top: 1px dashed;
+}
+
+#total-price-text {
+    font-size: medium;
+}
+
+#total-price-fee {
+  font-weight: bold;
+  font-size: x-large;
+  margin-bottom: 5%;
+}
+
+/****************************** price-tag-section end *************************/
+
+/****************************** receipt-div-section end *************************/
+.receipt-div{
+  background-image: url(./components/imgs/receipt.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* height: 661px;
+  width: 351px; */
+  height: 100%;
+  width: 100%;
+
+  /* flex settings */
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#receipt-school-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6%;
+  margin-bottom: 3%;
+}
+
+#receipt-school-name{
+  font-weight: bold;
+  font-size: large;
+}
+
+#receipt-school-address {
+  font-size: large;
+}
+
+#receipt-invoice {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#receipt-invoice-upper-delim {
+  width: 100%;
+  border-top: 1px dashed;
+  margin-bottom: 2%;
+}
+
+#receipt-invoice-descriptions{
+  display: flex;
+  flex-direction: row;
+}
+
+#receipt-invoice-descriptions-qty {
+  margin-left: 5%;
+}
+
+#receipt-invoice-descriptions-des{
+  margin-left: 5%;
+}
+
+#receipt-invoice-descriptions-amt {
+  margin-left: 20%;
+}
+
+#receipt-invoice-lower-delim {
+  width: 100%;
+  border-top: 1px dashed;
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+
+#receipt-tution-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 2%;
+}
+
+#receipt-tution-row-tution-qty {
+  margin-left: 7%;
+}
+
+#receipt-tution-row-tution-text {
+  margin-left: 10%;
+}
+
+#receipt-tution-row-tution-num {
+  margin-left: 35%;
+}
+
+#receipt-supplies-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+#receipt-supplies-row-qty {
+  margin-left: 7%;
+}
+
+#receipt-supplies-row-text {
+  margin-left: 10%;
+  width: 42%;
+}
+
+#receipt-supplies-row-num {
+  margin-left: 12.5%;
+}
+
+#receipt-subtotal-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 6%;
+}
+
+#receipt-subtotal-row-text {
+  margin-top: 3%;
+  margin-left: 40%;
+}
+
+#receipt-subtotal-row-number {
+  margin-top: 3%;
+  margin-left: 9%;
+}
+
+#receipt-invoice-end-delim {
+  width: 100%;
+  border-top: 1px dashed;
+  margin-bottom: 4%;
+}
+
+
+
+#receipt-discount-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+#receipt-discount-text {
+  font-size: large;
+  margin-left: 7%;
+  font-weight: bold;
+}
+
+#receipt-discount {
+  font-size: large;
+  margin-left: 33%;
+  font-weight: bold;
+}
+
+#receipt-total-row {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 1%;
+}
+
+#receipt-total-row-text {
+  font-size: large;
+  margin-left: 7%;
+}
+
+#receipt-total-row-num {
+  font-size: large;
+  margin-left: 48%;
+}
+
+#receipt-prompts {
+  margin-top: 2%;
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  padding-left: 7%;
+  padding-right: 7%;
+  flex-wrap: wrap;
+}
+
+#receipt-prompts-first-paragraph{
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+#receipt-prompts-second-paragraph{
+  margin-bottom: 3%;
+}
+
+#receipt-prompts-third-paragraph{
+  margin-bottom: 3%;
+}
+
+@media (max-width:321px)
+{
+  /* Price page SHOP2 start */
+  .prompt {
+    width: 100%;
+  }
+
+  #school-name {
+    font-size: medium;
+  }
+
+  #school-address {
+    font-size: medium;
+  }
+
+  #tuition-text {
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 13%;
+  }
+
+  #total-price-text {
+    font-size: medium;
+  }
+
+  #total-price-fee {
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 5%;
+  }
+
+
+  /* Price page SHOP2 end */
+
+
+  /* Total page SHOP4 start */
+  #receipt-school-name { 
+    font-weight: bold;
+    font-size: medium;
+  }
+
+  #receipt-invoice-descriptions-amt {
+    margin-left: 5%;
+  }
+
+  #receipt-tution-row-tution-num {
+    margin-left: 25%;
+  }
+
+  #receipt-supplies-row-num {
+    margin-left: 8%;
+  }
+
+  #receipt-subtotal-row-text {
+    margin-top: 3%;
+    margin-left: 30%;
+  }
+
+  #receipt-subtotal-row-number {
+    margin-top: 3%;
+    margin-left: 8%;
+  }
+
+  #receipt-discount {
+    font-size: large;
+    margin-left: 20%;
+    font-weight: bold;
+  }
+
+  #receipt-total-row-num {
+    font-size: large;
+    margin-left: 38%;
+  }
+  /* Total page SHOP4 end */
+
+}
+
+/* Modify the school name if the screen size changes */
+@media (max-width:376px) and (min-width: 322px) {
+  #receipt-school-name{
+    font-weight: bold;
+    font-size: medium;
+  }
+}
